@@ -1,0 +1,43 @@
+Package: vcpkg-cmake-config
+Version: 2024-05-23
+Architecture: x64-mingw-dynamic
+Multi-Arch: same
+Abi: 7e3327faba0b1426aaa1d934330916357cc880a70f8317a9609ee37f35b6d1e2
+Status: install ok installed
+
+Package: vcpkg-cmake
+Version: 2024-04-23
+Architecture: x64-mingw-dynamic
+Multi-Arch: same
+Abi: 20ee667819288ad2d5767bfb165eebb643f87de09d05a5225f2492c5cc007d96
+Status: install ok installed
+
+Package: cli11
+Version: 2.6.2
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-mingw-dynamic
+Multi-Arch: same
+Abi: 0505cd5bfb34c1a2f9ed454d8e701efd7fa2fd0eb54041ff2e4f51a02216a337
+Description: CLI11 is a command line parser for C++11 and beyond that provides a rich feature set with a simple and intuitive interface.
+Status: install ok installed
+
+Package: gtest
+Version: 1.17.0
+Port-Version: 2
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-mingw-dynamic
+Multi-Arch: same
+Abi: e1c3d7816a6e575ef4e66a2491d26c350146cc2e09123040ab85144fff841d3f
+Description: Google Testing and Mocking Framework
+Status: install ok installed
+
+Package: nlohmann-json
+Version: 3.12.0
+Port-Version: 2
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-mingw-dynamic
+Multi-Arch: same
+Abi: 5779dc8e1894c8f58f8ce20f79a07d8083627f20a2809eb827a08fdb0420434c
+Description: JSON for Modern C++
+Status: install ok installed
+
