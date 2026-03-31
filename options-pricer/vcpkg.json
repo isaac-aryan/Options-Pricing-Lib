@@ -1,0 +1,9 @@
+{
+  "name": "options-pricer",
+  "version": "0.1.0",
+  "dependencies": [
+    "nlohmann-json",
+    "gtest",
+    "cli11"
+  ]
+}
