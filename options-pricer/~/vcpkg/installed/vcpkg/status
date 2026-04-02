@@ -1,0 +1,43 @@
+Package: vcpkg-cmake-config
+Version: 2024-05-23
+Architecture: arm64-osx
+Multi-Arch: same
+Abi: c3d44b1a64ec871512dcbd81a945a9f902ea28aaccf214c0a57495a4dde880f2
+Status: install ok installed
+
+Package: vcpkg-cmake
+Version: 2024-04-23
+Architecture: arm64-osx
+Multi-Arch: same
+Abi: c706505210e8ccdf9567aa610cf78e61d0bbe55f8122588e52b9042f91cc601b
+Status: install ok installed
+
+Package: cli11
+Version: 2.6.2
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: arm64-osx
+Multi-Arch: same
+Abi: 07f561f3549d0b9d33b53007dec90b012ca1e4a5da72b8fd60d0ca40c00bbe4b
+Description: CLI11 is a command line parser for C++11 and beyond that provides a rich feature set with a simple and intuitive interface.
+Status: install ok installed
+
+Package: gtest
+Version: 1.17.0
+Port-Version: 2
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: arm64-osx
+Multi-Arch: same
+Abi: 618366a48e1adc08339ea9c337a01c6799f33ef675e73f1702137269be1de9f2
+Description: Google Testing and Mocking Framework
+Status: install ok installed
+
+Package: nlohmann-json
+Version: 3.12.0
+Port-Version: 2
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: arm64-osx
+Multi-Arch: same
+Abi: 2a91f946e7dfa43560059c780cf016c10fcadba4976932729a9a2a39c9374a65
+Description: JSON for Modern C++
+Status: install ok installed
+
