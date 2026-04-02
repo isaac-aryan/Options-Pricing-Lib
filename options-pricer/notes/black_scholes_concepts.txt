@@ -1,0 +1,99 @@
+BLACK-SCHOLES MODEL
+===================
+
+What it does: takes in a few market inputs and spits out the fair price of a European option — no simulation needed,
+just a closed-form formula.
+
+
+INPUTS
+------
+S0    = current stock price
+K     = strike (exercise) price
+r     = risk-free interest rate
+T     = time to maturity (in years)
+sigma = volatility (std dev of log returns of the stock)
+
+
+THE FORMULAS
+------------
+Call:   C0 = S0.N(d1) - K.e^(-rT).N(d2)
+Put:    P0 = K.e^(-rT).N(-d2) - S0.N(-d1)      ** note the negative signs for the put **
+
+where:
+  d1 = [ln(S0/K) + (r + sigma^2/2).T] / (sigma.sqrt(T))
+  d2 = [ln(S0/K) + (r - sigma^2/2).T] / (sigma.sqrt(T))
+
+  or equivalently: d2 = d1 - sigma.sqrt(T)
+
+
+WHAT N(x) IS
+-------------
+N(x) = cumulative distribution function of the standard normal distribution.
+In plain English: the probability that a random variable from a standard normal distribution is <= x.
+
+N(0)    = 0.5    (50% chance of being below the mean)
+N(1.96) ≈ 0.975  (97.5% chance)
+N(-inf) = 0
+N(+inf) = 1
+
+In C++, you compute it as: 0.5 * erfc(-x / sqrt(2))   using <cmath>
+
+
+INTUITION BEHIND THE CALL FORMULA
+----------------------------------
+Break it into two parts:
+
+  S0.N(d1)            = what you expect to GET   — the stock price weighted by the probability that you'll exercise
+  K.e^(-rT).N(d2)     = what you expect to PAY   — the strike price discounted to today, weighted by the probability of exercising
+
+  Call price = expected gain - expected cost
+
+The put formula flips the perspective — you profit when the stock is BELOW the strike, so it uses N(-d1) and N(-d2)
+which represent the probability of the opposite event (stock ending below the strike).
+
+
+INTUITION BEHIND d1 AND d2
+---------------------------
+ln(S0/K):
+  This is the ratio of stock price to strike price (in log terms).
+  If S0 >> K, this is a large positive number → d1, d2 are large → N(d1), N(d2) close to 1 → option is very likely
+  to be exercised → high price. Makes sense: a call that's deep in-the-money is worth a lot.
+
+  If S0 << K, this is a large negative number → d1, d2 are very negative → N(d1), N(d2) close to 0 → option is
+  unlikely to be exercised → low price.
+
+sigma (volatility):
+  Higher sigma → higher d1, lower d2
+  So the "get" part S0.N(d1) increases and the "pay" part K.e^(-rT).N(d2) decreases.
+  Net effect: you get more and pay less → call value goes UP.
+
+  This makes intuitive sense: the more volatile a stock is, the more valuable the option.
+  Options love volatility because your downside is capped (you just don't exercise) but your upside is unlimited.
+
+
+PUT-CALL PARITY
+---------------
+For European options, calls and puts are linked by:
+
+  C - P = S0 - K.e^(-rT)
+
+This means if you know the call price, you can derive the put price (and vice versa).
+
+Why this matters for the project:
+  - It's your primary cross-validation check. After implementing Black-Scholes, compute both C and P, then verify
+    that C - P = S0 - K.e^(-rT). If it doesn't hold, something is wrong.
+  - Later, when Monte Carlo and Binomial Tree are implemented, you can check put-call parity across ALL models
+    to catch bugs.
+
+
+WHAT BLACK-SCHOLES ASSUMES (LIMITATIONS)
+-----------------------------------------
+- European options only (no early exercise)
+- Constant volatility and interest rate over the life of the option
+- No dividends
+- Stock prices follow a log-normal distribution (geometric Brownian motion)
+- No transaction costs or taxes
+- Continuous trading is possible
+
+These assumptions don't hold perfectly in real markets, which is why other models (Monte Carlo, Binomial) exist
+— they can relax some of these constraints.
