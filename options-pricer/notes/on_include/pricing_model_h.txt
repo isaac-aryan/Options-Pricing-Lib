@@ -1,0 +1,41 @@
+NEED FOR ABSTRACTION?
+
+Think of it without abstraction first. You'd write three separate classes with no connection:
+
+BlackScholes bs;
+double p1 = bs.calculatePrice(option, market);
+
+MonteCarlo mc;
+double p2 = mc.computePrice(option, market);
+
+BinomialTree bt;
+double p3 = bt.getPrice(option, market);
+
+Different method names, no guarantee they take the same inputs. Now imagine you want to loop through all models and compare prices
+— you can't, because they have nothing in common.
+
+With the interface:
+
+std::vector<PricingModel*> models = { &bs, &mc, &bt };
+for (auto* model : models) {
+    std::cout << model->name() << ": " << model->price(option, market);
+}
+
+One loop, works for all models. Your benchmark, your CLI, your tests — they all just work with PricingModel* and don't care which
+model is behind it.
+
+The interface is a contract: "if you're a pricing model, you must have price() and name()." Every model signs that contract.
+Everything else in your code just trusts the contract.
+
+___________________________________________________________________________________________________________________________________________________
+
+
+**PURE VIRTUAL :
+Pure virtual (= 0) — no implementation, subclass must override it:
+virtual double price(...) = 0;  // "I don't know how, you figure it out"
+
+Virtual — has a default implementation, subclass can override it:
+virtual double price(...) { return 0.0; }  // "here's a default, override if you want"
+
+Your destructor is virtual (not pure) because the default empty body {} is fine for all subclasses. Your price() and name() are
+pure virtual because there's no sensible default — each model must provide its own.
