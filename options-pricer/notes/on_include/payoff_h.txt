@@ -1,0 +1,12 @@
+Defining a function body in a header means if multiple .cpp files include it, you get duplicate symbol errors.
+
+Thus we use inline function:
+- for an inline fn, the compiler essentially takes the fn body and pastes it directly at call site thereby skipping the overhead of calling a fn.
+- modern c++ decides whether to paste or not based on optimization level either way
+- so the main use now is : "allow multiple definitions across translation units" — which is why it's useful for functions in headers.
+
+also i initially used "Option option" as a parameter in the fn; but then changed it to "const Option& option" :
+- without const Option&: the entire Option struct gets copied every time you call payoff(). A new Option is created on the stack with the same values.
+- with const Option&: you pass a reference (basically a pointer under the hood) — no copy, it just reads the original directly.
+- & = pass by reference, avoids the copy
+- const = promises you won't modify the original
