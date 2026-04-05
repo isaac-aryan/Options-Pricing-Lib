@@ -1,0 +1,68 @@
+[
+{
+  "directory": "C:/Users/ayoni/OneDrive/Desktop/Options-Pricing-Lib/options-pricer/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/pricer_lib.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\pricer_lib.dir\\src\\black_scholes.cpp.obj -c C:\\Users\\ayoni\\OneDrive\\Desktop\\Options-Pricing-Lib\\options-pricer\\src\\black_scholes.cpp",
+  "file": "C:/Users/ayoni/OneDrive/Desktop/Options-Pricing-Lib/options-pricer/src/black_scholes.cpp",
+  "output": "CMakeFiles/pricer_lib.dir/src/black_scholes.cpp.obj"
+},
+{
+  "directory": "C:/Users/ayoni/OneDrive/Desktop/Options-Pricing-Lib/options-pricer/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/pricer_lib.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\pricer_lib.dir\\src\\monte_carlo.cpp.obj -c C:\\Users\\ayoni\\OneDrive\\Desktop\\Options-Pricing-Lib\\options-pricer\\src\\monte_carlo.cpp",
+  "file": "C:/Users/ayoni/OneDrive/Desktop/Options-Pricing-Lib/options-pricer/src/monte_carlo.cpp",
+  "output": "CMakeFiles/pricer_lib.dir/src/monte_carlo.cpp.obj"
+},
+{
+  "directory": "C:/Users/ayoni/OneDrive/Desktop/Options-Pricing-Lib/options-pricer/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/pricer_lib.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\pricer_lib.dir\\src\\binomial_tree.cpp.obj -c C:\\Users\\ayoni\\OneDrive\\Desktop\\Options-Pricing-Lib\\options-pricer\\src\\binomial_tree.cpp",
+  "file": "C:/Users/ayoni/OneDrive/Desktop/Options-Pricing-Lib/options-pricer/src/binomial_tree.cpp",
+  "output": "CMakeFiles/pricer_lib.dir/src/binomial_tree.cpp.obj"
+},
+{
+  "directory": "C:/Users/ayoni/OneDrive/Desktop/Options-Pricing-Lib/options-pricer/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/pricer_lib.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\pricer_lib.dir\\src\\greeks.cpp.obj -c C:\\Users\\ayoni\\OneDrive\\Desktop\\Options-Pricing-Lib\\options-pricer\\src\\greeks.cpp",
+  "file": "C:/Users/ayoni/OneDrive/Desktop/Options-Pricing-Lib/options-pricer/src/greeks.cpp",
+  "output": "CMakeFiles/pricer_lib.dir/src/greeks.cpp.obj"
+},
+{
+  "directory": "C:/Users/ayoni/OneDrive/Desktop/Options-Pricing-Lib/options-pricer/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/pricer_lib.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\pricer_lib.dir\\src\\benchmark.cpp.obj -c C:\\Users\\ayoni\\OneDrive\\Desktop\\Options-Pricing-Lib\\options-pricer\\src\\benchmark.cpp",
+  "file": "C:/Users/ayoni/OneDrive/Desktop/Options-Pricing-Lib/options-pricer/src/benchmark.cpp",
+  "output": "CMakeFiles/pricer_lib.dir/src/benchmark.cpp.obj"
+},
+{
+  "directory": "C:/Users/ayoni/OneDrive/Desktop/Options-Pricing-Lib/options-pricer/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DCLI11_COMPILE @CMakeFiles/options-pricer.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\options-pricer.dir\\src\\main.cpp.obj -c C:\\Users\\ayoni\\OneDrive\\Desktop\\Options-Pricing-Lib\\options-pricer\\src\\main.cpp",
+  "file": "C:/Users/ayoni/OneDrive/Desktop/Options-Pricing-Lib/options-pricer/src/main.cpp",
+  "output": "CMakeFiles/options-pricer.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/ayoni/OneDrive/Desktop/Options-Pricing-Lib/options-pricer/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DGTEST_LINKED_AS_SHARED_LIBRARY=1 @CMakeFiles/tests.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\tests.dir\\tests\\test_payoff.cpp.obj -c C:\\Users\\ayoni\\OneDrive\\Desktop\\Options-Pricing-Lib\\options-pricer\\tests\\test_payoff.cpp",
+  "file": "C:/Users/ayoni/OneDrive/Desktop/Options-Pricing-Lib/options-pricer/tests/test_payoff.cpp",
+  "output": "CMakeFiles/tests.dir/tests/test_payoff.cpp.obj"
+},
+{
+  "directory": "C:/Users/ayoni/OneDrive/Desktop/Options-Pricing-Lib/options-pricer/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DGTEST_LINKED_AS_SHARED_LIBRARY=1 @CMakeFiles/tests.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\tests.dir\\tests\\test_black_scholes.cpp.obj -c C:\\Users\\ayoni\\OneDrive\\Desktop\\Options-Pricing-Lib\\options-pricer\\tests\\test_black_scholes.cpp",
+  "file": "C:/Users/ayoni/OneDrive/Desktop/Options-Pricing-Lib/options-pricer/tests/test_black_scholes.cpp",
+  "output": "CMakeFiles/tests.dir/tests/test_black_scholes.cpp.obj"
+},
+{
+  "directory": "C:/Users/ayoni/OneDrive/Desktop/Options-Pricing-Lib/options-pricer/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DGTEST_LINKED_AS_SHARED_LIBRARY=1 @CMakeFiles/tests.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\tests.dir\\tests\\test_monte_carlo.cpp.obj -c C:\\Users\\ayoni\\OneDrive\\Desktop\\Options-Pricing-Lib\\options-pricer\\tests\\test_monte_carlo.cpp",
+  "file": "C:/Users/ayoni/OneDrive/Desktop/Options-Pricing-Lib/options-pricer/tests/test_monte_carlo.cpp",
+  "output": "CMakeFiles/tests.dir/tests/test_monte_carlo.cpp.obj"
+},
+{
+  "directory": "C:/Users/ayoni/OneDrive/Desktop/Options-Pricing-Lib/options-pricer/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DGTEST_LINKED_AS_SHARED_LIBRARY=1 @CMakeFiles/tests.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\tests.dir\\tests\\test_binomial_tree.cpp.obj -c C:\\Users\\ayoni\\OneDrive\\Desktop\\Options-Pricing-Lib\\options-pricer\\tests\\test_binomial_tree.cpp",
+  "file": "C:/Users/ayoni/OneDrive/Desktop/Options-Pricing-Lib/options-pricer/tests/test_binomial_tree.cpp",
+  "output": "CMakeFiles/tests.dir/tests/test_binomial_tree.cpp.obj"
+},
+{
+  "directory": "C:/Users/ayoni/OneDrive/Desktop/Options-Pricing-Lib/options-pricer/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DGTEST_LINKED_AS_SHARED_LIBRARY=1 @CMakeFiles/tests.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\tests.dir\\tests\\test_greeks.cpp.obj -c C:\\Users\\ayoni\\OneDrive\\Desktop\\Options-Pricing-Lib\\options-pricer\\tests\\test_greeks.cpp",
+  "file": "C:/Users/ayoni/OneDrive/Desktop/Options-Pricing-Lib/options-pricer/tests/test_greeks.cpp",
+  "output": "CMakeFiles/tests.dir/tests/test_greeks.cpp.obj"
+}
+]
