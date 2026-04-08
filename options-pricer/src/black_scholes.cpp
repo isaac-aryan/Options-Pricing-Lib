@@ -1,10 +1,7 @@
 #include "black_scholes.h"
+#include "math_utils.h"
 #include "payoff.h"
 #include <cmath>
-
-static double norm_cdf(double x) {
-    return 0.5 * std::erfc(-x / std::sqrt(2.0));
-}
 
 std::string BlackScholesModel::name() const {
     return "Black-Scholes";
@@ -26,5 +23,3 @@ double BlackScholesModel::price(const Option& option, const MarketData& market) 
     else
         return K * std::exp(-r * T) * norm_cdf(-d2) - S * norm_cdf(-d1);
 }
-
-
