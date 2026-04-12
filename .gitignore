@@ -45,4 +45,4 @@ build/
 .claude/
 ~/vcpkg/installed/
 vcpkg_installed/
-.notes/
+notes/
